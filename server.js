@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 // Replace with your MongoDB connection string
-const uri = 'mongodb+srv://rockyxxxyash69:SqdjLFaTnPjHuUFA@cluster0-shard-00-02.2qeam.mongodb.net:27017/mydatabase?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://rockyxxxyash69:SqdjLFaTnPjHuUFA@cluster0-shard-00-02.2qeam.mongodb.net/mydatabase?retryWrites=true&w=majority';
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const voteSchema = new mongoose.Schema({
