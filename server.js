@@ -56,12 +56,12 @@ app.post('/vote', async (req, res) => {
 
 app.get('/results', async (req, res) => {
   const votes = await Vote.find();
-  const result = { optionA: 0, optionB: 0 };
+  const result = { Adil: 0, Anaswara: 0, Prithviraj: 0 };
 
   votes.forEach(vote => {
-    if (vote.vote === 'A') result.Adil++;
-    if (vote.vote === 'B') result.Anaswara++;
-    if (vote.vote === 'C') result.Prithviraj++;
+    if (vote.vote === 'Adil') result.Adil++;
+    if (vote.vote === 'Anaswara') result.Anaswara++;
+    if (vote.vote === 'Prithviraj') result.Prithviraj++;
   });
 
   res.json(result);
